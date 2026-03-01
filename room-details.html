@@ -1,0 +1,211 @@
+<!-- 3. ROOM-DETAILS.HTML - Room Details Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deluxe Ocean View | Room Details | Aura Hotels</title>
+    <meta name="description" content="Detailed information about our Deluxe Ocean View room including amenities, photos, and booking options.">
+    <link rel="stylesheet" href="components/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">Aura Hotels</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html" class="active">Rooms</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="spa.html">Spa</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Room Gallery -->
+    <section class="room-gallery">
+        <div class="gallery-main">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=80" alt="Room Main View" id="mainImage">
+            <button class="gallery-nav prev" onclick="changeImage(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="gallery-nav next" onclick="changeImage(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="gallery-thumbs">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80" class="active" onclick="setImage(this)">
+            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=400&q=80" onclick="setImage(this)">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=80" onclick="setImage(this)">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=400&q=80" onclick="setImage(this)">
+        </div>
+    </section>
+
+    <!-- Room Details -->
+    <section class="section room-details">
+        <div class="container">
+            <div class="room-details-grid">
+                <div class="room-info">
+                    <div class="room-header">
+                        <div>
+                            <span class="room-category">Deluxe Room</span>
+                            <h1>Deluxe Ocean View</h1>
+                        </div>
+                        <div class="room-price-tag">
+                            <span class="price">$299</span>
+                            <span class="period">per night</span>
+                        </div>
+                    </div>
+
+                    <div class="room-description">
+                        <p>Experience breathtaking panoramic views of the ocean from your private balcony. Our Deluxe Ocean View rooms offer the perfect blend of comfort and luxury, featuring premium bedding, modern amenities, and elegant decor inspired by coastal serenity.</p>
+                        <p>Wake up to the sound of waves and enjoy your morning coffee while watching the sunrise over the horizon. The spacious 45 square meter room includes a luxurious bathroom with rain shower and premium toiletries.</p>
+                    </div>
+
+                    <div class="room-specs">
+                        <h3>Room Specifications</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <i class="fas fa-expand"></i>
+                                <span>45 m²</span>
+                                <label>Room Size</label>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-bed"></i>
+                                <span>King Bed</span>
+                                <label>Bed Type</label>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-user"></i>
+                                <span>2 Adults</span>
+                                <label>Max Occupancy</label>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mountain"></i>
+                                <span>Ocean View</span>
+                                <label>View</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="amenities-list">
+                        <h3>Room Amenities</h3>
+                        <div class="amenities-grid">
+                            <div class="amenity-item"><i class="fas fa-wifi"></i> High-speed WiFi</div>
+                            <div class="amenity-item"><i class="fas fa-snowflake"></i> Air Conditioning</div>
+                            <div class="amenity-item"><i class="fas fa-tv"></i> 55" Smart TV</div>
+                            <div class="amenity-item"><i class="fas fa-coffee"></i> Coffee Machine</div>
+                            <div class="amenity-item"><i class="fas fa-bath"></i> Rain Shower</div>
+                            <div class="amenity-item"><i class="fas fa-utensils"></i> Mini Bar</div>
+                            <div class="amenity-item"><i class="fas fa-tshirt"></i> Bathrobes</div>
+                            <div class="amenity-item"><i class="fas fa-concierge-bell"></i> 24h Room Service</div>
+                            <div class="amenity-item"><i class="fas fa-safe"></i> In-room Safe</div>
+                            <div class="amenity-item"><i class="fas fa-wind"></i> Hair Dryer</div>
+                            <div class="amenity-item"><i class="fas fa-iron"></i> Iron & Board</div>
+                            <div class="amenity-item"><i class="fas fa-parking"></i> Free Parking</div>
+                        </div>
+                    </div>
+
+                    <div class="policies">
+                        <h3>Policies</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Check-in: 3:00 PM / Check-out: 12:00 PM</li>
+                            <li><i class="fas fa-check"></i> Free cancellation up to 24 hours before arrival</li>
+                            <li><i class="fas fa-check"></i> No smoking room</li>
+                            <li><i class="fas fa-check"></i> Children welcome (extra bed available)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Booking Sidebar -->
+                <aside class="booking-sidebar">
+                    <div class="booking-widget sticky">
+                        <h3>Book This Room</h3>
+                        <form action="booking.html" method="GET">
+                            <input type="hidden" name="room" value="deluxe-ocean">
+                            
+                            <div class="form-group">
+                                <label>Check In</label>
+                                <input type="date" name="checkin" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Check Out</label>
+                                <input type="date" name="checkout" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Guests</label>
+                                <select name="guests">
+                                    <option value="1">1 Guest</option>
+                                    <option value="2" selected>2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                </select>
+                            </div>
+
+                            <div class="price-breakdown">
+                                <div class="price-row">
+                                    <span>$299 x 1 night</span>
+                                    <span>$299</span>
+                                </div>
+                                <div class="price-row">
+                                    <span>Taxes & Fees</span>
+                                    <span>$45</span>
+                                </div>
+                                <div class="price-row total">
+                                    <span>Total</span>
+                                    <span>$344</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">Proceed to Booking</button>
+                        </form>
+                        
+                        <div class="contact-info">
+                            <p>Questions? <a href="contact.html">Contact us</a> or call <strong>+1 (555) 123-4567</strong></p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar Rooms -->
+    <section class="section similar-rooms bg-light">
+        <div class="container">
+            <h2 class="section-title">You May Also Like</h2>
+            <div class="rooms-grid">
+                <article class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="Deluxe Garden">
+                    </div>
+                    <div class="room-content">
+                        <h3>Deluxe Garden View</h3>
+                        <div class="room-price">$349/night</div>
+                        <a href="room-details.html?id=deluxe-garden" class="btn btn-secondary">View Details</a>
+                    </div>
+                </article>
+                <article class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Executive Suite">
+                    </div>
+                    <div class="room-content">
+                        <h3>Executive Suite</h3>
+                        <div class="room-price">$499/night</div>
+                        <a href="room-details.html?id=executive" class="btn btn-secondary">View Details</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <script src="components/scripts.js"></script>
+</body>
+</html>

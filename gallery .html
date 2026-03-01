@@ -1,0 +1,147 @@
+<!-- 6. GALLERY.HTML - Gallery Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Aura Hotels</title>
+    <meta name="description" content="Explore our hotel through our photo gallery. Rooms, amenities, dining, and more.">
+    <link rel="stylesheet" href="components/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">Aura Hotels</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="page-header-image">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1920&q=80" alt="Gallery">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="page-header-content">
+            <h1>Our Gallery</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Gallery</span>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section gallery-section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="rooms">Rooms</button>
+                <button class="filter-btn" data-filter="dining">Dining</button>
+                <button class="filter-btn" data-filter="spa">Spa</button>
+                <button class="filter-btn" data-filter="facilities">Facilities</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="Deluxe Room">
+                    <div class="gallery-overlay">
+                        <h4>Deluxe Ocean View</h4>
+                        <button class="btn-view" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Suite">
+                    <div class="gallery-overlay">
+                        <h4>Executive Suite</h4>
+                        <button class="btn-view" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="dining">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Restaurant">
+                    <div class="gallery-overlay">
+                        <h4>Fine Dining</h4>
+                        <button class="btn-view" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="spa">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Spa">
+                    <div class="gallery-overlay">
+                        <h4>Wellness Spa</h4>
+                        <button class="btn-view" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="facilities">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Pool">
+                    <div class="gallery-overlay">
+                        <h4>Infinity Pool</h4>
+                        <button class="btn-view" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80" alt="Garden Room">
+                    <div class="gallery-overlay">
+                        <h4>Garden View Room</h4>
+                        <button class="btn-view" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="facilities">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Lobby">
+                    <div class="gallery-overlay">
+                        <h4>Grand Lobby</h4>
+                        <button class="btn-view" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="dining">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Bar">
+                    <div class="gallery-overlay">
+                        <h4>Sky Bar</h4>
+                        <button class="btn-view" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="spa">
+                    <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&q=80" alt="Massage">
+                    <div class="gallery-overlay">
+                        <h4>Treatment Room</h4>
+                        <button class="btn-view" onclick="openLightbox(this)"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+        <button class="lightbox-nav prev" onclick="changeLightboxImage(-1)"><i class="fas fa-chevron-left"></i></button>
+        <img src="" alt="Gallery Image" id="lightboxImage">
+        <button class="lightbox-nav next" onclick="changeLightboxImage(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script src="components/scripts.js"></script>
+</body>
+</html>

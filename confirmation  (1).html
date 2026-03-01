@@ -1,0 +1,74 @@
+<!-- 12. CONFIRMATION.HTML - Booking Confirmation Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed | Aura Hotels</title>
+    <meta name="description" content="Your reservation at Aura Hotels has been confirmed.">
+    <link rel="stylesheet" href="components/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">Aura Hotels</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="section confirmation-section">
+        <div class="container">
+            <div class="confirmation-card">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1>Booking Confirmed!</h1>
+                <p class="confirmation-message">Thank you for choosing Aura Hotels. Your reservation has been confirmed and a confirmation email has been sent to your inbox.</p>
+                
+                <div class="booking-reference">
+                    <span>Booking Reference</span>
+                    <strong>AUR-2024-78432</strong>
+                </div>
+
+                <div class="confirmation-details">
+                    <div class="detail-row">
+                        <span>Guest Name</span>
+                        <strong>John Doe</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>Room</span>
+                        <strong>Deluxe Ocean View</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>Check-in</span>
+                        <strong>February 28, 2024</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>Check-out</span>
+                        <strong>March 2, 2024</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>Guests</span>
+                        <strong>2 Adults</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>Total Paid</span>
+                        <strong>$737.70</strong>
+                    </div>
+                </div>
+
+                <div class="confirmation-actions">
+                    <a href="#" class="btn btn-secondary" onclick="window.print()"><i class="fas fa-print"></i> Print</a>
+                    <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="components/scripts.js"></script>
+</body>
+</html>

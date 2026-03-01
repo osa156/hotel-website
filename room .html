@@ -1,0 +1,296 @@
+<!-- 2. ROOMS.HTML - Room Listing Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Suites | Aura Hotels</title>
+    <meta name="description" content="Explore our luxurious rooms and suites. From deluxe rooms to presidential villas, find your perfect accommodation.">
+    <link rel="stylesheet" href="components/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">Aura Hotels</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html" class="active">Rooms & Suites</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="spa.html">Spa & Wellness</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-image">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80" alt="Hotel Rooms">
+            <div class="page-header-overlay"></div>
+        </div>
+        <div class="page-header-content">
+            <h1>Rooms & Suites</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Rooms & Suites</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Room Filters -->
+    <section class="section room-filters">
+        <div class="container">
+            <div class="filters-bar">
+                <div class="filter-group">
+                    <label>Filter by:</label>
+                    <select id="filterType">
+                        <option value="all">All Room Types</option>
+                        <option value="standard">Standard</option>
+                        <option value="deluxe">Deluxe</option>
+                        <option value="suite">Suites</option>
+                        <option value="villa">Villas</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="filterPrice">
+                        <option value="all">Price Range</option>
+                        <option value="low">$100 - $300</option>
+                        <option value="medium">$300 - $600</option>
+                        <option value="high">$600+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="sortBy">
+                        <option value="recommended">Recommended</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Grid -->
+    <section class="section rooms-listing">
+        <div class="container">
+            <div class="rooms-grid rooms-grid-full">
+                <!-- Room 1 -->
+                <article class="room-card room-card-horizontal" data-type="standard" data-price="199">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80" alt="Standard Room">
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h3>Standard Room</h3>
+                            <div class="room-price">
+                                <span class="price">$199</span>
+                                <span class="period">/night</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">Comfortable and elegant room with city views, perfect for solo travelers or couples.</p>
+                        <div class="room-amenities">
+                            <span><i class="fas fa-bed"></i> Queen Bed</span>
+                            <span><i class="fas fa-expand"></i> 32 m²</span>
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-snowflake"></i> AC</span>
+                        </div>
+                        <div class="room-actions">
+                            <a href="room-details.html?id=standard" class="btn btn-secondary">View Details</a>
+                            <a href="booking.html?room=standard" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Room 2 -->
+                <article class="room-card room-card-horizontal" data-type="deluxe" data-price="299">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="Deluxe Ocean View">
+                        <span class="room-badge">Popular</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h3>Deluxe Ocean View</h3>
+                            <div class="room-price">
+                                <span class="price">$299</span>
+                                <span class="period">/night</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">Spacious room with panoramic ocean views, king bed, and premium bathroom amenities.</p>
+                        <div class="room-amenities">
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-expand"></i> 45 m²</span>
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-coffee"></i> Breakfast</span>
+                        </div>
+                        <div class="room-actions">
+                            <a href="room-details.html?id=deluxe-ocean" class="btn btn-secondary">View Details</a>
+                            <a href="booking.html?room=deluxe-ocean" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Room 3 -->
+                <article class="room-card room-card-horizontal" data-type="deluxe" data-price="349">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80" alt="Deluxe Garden View">
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h3>Deluxe Garden View</h3>
+                            <div class="room-price">
+                                <span class="price">$349</span>
+                                <span class="period">/night</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">Overlooking our tropical gardens with private balcony and outdoor seating area.</p>
+                        <div class="room-amenities">
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-expand"></i> 48 m²</span>
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-tree"></i> Garden</span>
+                        </div>
+                        <div class="room-actions">
+                            <a href="room-details.html?id=deluxe-garden" class="btn btn-secondary">View Details</a>
+                            <a href="booking.html?room=deluxe-garden" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Room 4 -->
+                <article class="room-card room-card-horizontal" data-type="suite" data-price="499">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Executive Suite">
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h3>Executive Suite</h3>
+                            <div class="room-price">
+                                <span class="price">$499</span>
+                                <span class="period">/night</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">Luxurious suite with separate living area, work desk, and private balcony with ocean views.</p>
+                        <div class="room-amenities">
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-expand"></i> 75 m²</span>
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-glass-cheers"></i> Lounge</span>
+                        </div>
+                        <div class="room-actions">
+                            <a href="room-details.html?id=executive-suite" class="btn btn-secondary">View Details</a>
+                            <a href="booking.html?room=executive-suite" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Room 5 -->
+                <article class="room-card room-card-horizontal" data-type="suite" data-price="699">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1631049552057-403cdb8f0658?w=800&q=80" alt="Honeymoon Suite">
+                        <span class="room-badge">Romantic</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h3>Honeymoon Suite</h3>
+                            <div class="room-price">
+                                <span class="price">$699</span>
+                                <span class="period">/night</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">Romantic suite with jacuzzi, champagne service, and stunning sunset views.</p>
+                        <div class="room-amenities">
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-expand"></i> 85 m²</span>
+                            <span><i class="fas fa-hot-tub"></i> Jacuzzi</span>
+                            <span><i class="fas fa-wine-glass"></i> Minibar</span>
+                        </div>
+                        <div class="room-actions">
+                            <a href="room-details.html?id=honeymoon" class="btn btn-secondary">View Details</a>
+                            <a href="booking.html?room=honeymoon" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Room 6 -->
+                <article class="room-card room-card-horizontal" data-type="villa" data-price="1299">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Presidential Villa">
+                        <span class="room-badge">Luxury</span>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header">
+                            <h3>Presidential Villa</h3>
+                            <div class="room-price">
+                                <span class="price">$1,299</span>
+                                <span class="period">/night</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">Ultimate luxury with private pool, butler service, kitchen, and direct beach access.</p>
+                        <div class="room-amenities">
+                            <span><i class="fas fa-bed"></i> 2 King Beds</span>
+                            <span><i class="fas fa-expand"></i> 200 m²</span>
+                            <span><i class="fas fa-swimming-pool"></i> Private Pool</span>
+                            <span><i class="fas fa-user-tie"></i> Butler</span>
+                        </div>
+                        <div class="room-actions">
+                            <a href="room-details.html?id=presidential" class="btn btn-secondary">View Details</a>
+                            <a href="booking.html?room=presidential" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">✦</span>
+                        <span class="logo-text">Aura Hotels</span>
+                    </a>
+                    <p>Luxury accommodation with world-class service.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="spa.html">Spa</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> reservations@aurahotels.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aura Hotels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="components/scripts.js"></script>
+</body>
+</html>
